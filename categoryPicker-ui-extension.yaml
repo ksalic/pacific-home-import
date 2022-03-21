@@ -1,0 +1,9 @@
+/categoryPicker:
+  jcr:primaryType: frontend:uiExtension
+  jcr:mixinTypes: ['hippostd:relaxed']
+  frontend:config: '{"dataMode":"single","title":"Category Picker","size":"large",
+    "application": "categoryPicker", "connectorIdField" : "brxsaas:connectorid"}'
+  frontend:displayName: External Category Picker
+  frontend:extensionPoint: document.field
+  frontend:initialHeightInPixels: 200
+  frontend:url: https://pacific-ui-extensions.herokuapp.com/category-picker

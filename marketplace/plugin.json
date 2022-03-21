@@ -1,0 +1,2638 @@
+{
+  "id": "pacific-saas",
+  "name": "Pacific SaaS",
+  "description": "<p>Pacific SaaS install on a Sales Sandbox</p>\n",
+  "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGhlaWdodD0iMTQwIiB2aWV3Qm94PSIwIDAgMTQwIDE0MCIgd2lkdGg9IjE0MCI+DQogIDxkZWZzPg0KICAgIDxjbGlwUGF0aCBpZD0iYSI+DQogICAgICA8cmVjdCBmaWxsPSIjMDAyODQwIiBoZWlnaHQ9Ijc3LjMxMSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2Utd2lkdGg9IjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIHdpZHRoPSI3NS4xMDIiLz4NCiAgICA8L2NsaXBQYXRoPg0KICA8L2RlZnM+DQogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPg0KICAgIDxwYXRoIGQ9Ik0yMywwaDk0YTIzLDIzLDAsMCwxLDIzLDIzdjk0YTIzLDIzLDAsMCwxLTIzLDIzSDIzQTIzLDIzLDAsMCwxLDAsMTE3VjIzQTIzLDIzLDAsMCwxLDIzLDBaIiBmaWxsPSIjZmZkNTAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIi8+DQogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2EpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDYuMTkgMTA4LjExMikgcm90YXRlKDE4MCkiPg0KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNDA1IC0xNTEuNzMpIj4NCiAgICAgICAgPHBhdGggZD0iTTAsMEMxLjAyLjQ5MywxLjk1MSwxLjEwNywyLjk0NCwxLjYzOSwxLjk3MiwxLjA4LDEsLjUyMywwLDBaIiBmaWxsPSIjMDAyODQwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTYuMjc2IDc1LjUwNSkiLz4NCiAgICAgICAgPHBhdGggZD0iTTM1Ljk0NCw1OS43VjBIMFY5MS4yMzRBOTkuMzM5LDk5LjMzOSwwLDAsMSwzNS45NDQsNTkuN1oiIGZpbGw9IiMwMDI4NDAiLz4NCiAgICAgICAgPHBhdGggZD0iTS4wMzQsMCwwLC4wNUMuMy4yLjYxMi4zMzEuOTA4LjQ4Ni42LjM0LjM0LjE0Mi4wMzQsMFoiIGZpbGw9IiMwMDI4NDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNS4zNjcgNzUuMDE5KSIvPg0KICAgICAgICA8cGF0aCBkPSJNMTIxLjUsMTAuMDQ3Yy0uOTkzLS41MzItMS45MjQtMS4xNDYtMi45NDQtMS42MzktLjMtLjE1NS0uNjA5LS4yODUtLjkwOC0uNDM2TDk4LjcsMzYuNjZjMTcuMDYsNi45NDUsMjguMzE0LDIzLjkyOCwyOC4zMTQsNDMuNjI0LDAsMjUuNzY3LTE5LjE3Myw0Ny4wMzMtNDUuNTM2LDQ3LjAzMy0yNi42NTksMC00NS41MzQtMjEuMjY2LTQ1LjUzNC00Ny4wMzMsMC0yNS4xNjksMTguMDc2LTQ1LjksNDMuNzY1LTQ2Ljg1MUwxMDAuNDE4LDIuMDgxQTg4LjQ0LDg4LjQ0LDAsMCwwLDgxLjQ3NywwLDgzLjYzMiw4My42MzIsMCwwLDAsMzUuOTQ0LDEyLjkzNHYtLjAwOUE4MSw4MSwwLDAsMCwwLDgwLjI4NHY4MC4yODJIMzUuOTQ0VjE0Ny42MzRhODMuNjM3LDgzLjYzNywwLDAsMCw0NS41MzQsMTIuOTMxLDg1Ljk2MSw4NS45NjEsMCwwLDAsMzIuNDgxLTYuMTkyQTgxLDgxLDAsMCwwLDEyMS41LDEwLjA0N1oiIGZpbGw9IiMwMDI4NDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNjcuMDk3KSIvPg0KICAgICAgPC9nPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQo=/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQzMC42MjQgNDMwLjYyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjYyNCA0MzAuNjI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6bm9uZTsiIHBvaW50cz0iOTEuNzYsMTY2LjIwNyAxMDguMDM1LDI1MC4xNyAxNTAuODQ1LDI1MC4xNyAxMzcuMDUsMTY2LjIwNyAJCSIvPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDpub25lOyIgZD0iTTEzMi40MTQsMzY3LjA3N2MwLDEzLjY2OSwxMS4xMjEsMjQuNzg5LDI0Ljc5MSwyNC43ODljMTMuNjY4LDAsMjQuNzg3LTExLjEyLDI0Ljc4Ny0yNC43ODkNCgkJCXMtMTEuMTE5LTI0Ljc4OS0yNC43ODctMjQuNzg5QzE0My41MzUsMzQyLjI4OSwxMzIuNDE0LDM1My40MDgsMTMyLjQxNCwzNjcuMDc3eiIvPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDpub25lOyIgZD0iTTMwNS42OTUsMzY3LjA3N2MwLDEzLjY2OSwxMS4xMjMsMjQuNzg5LDI0Ljc5MywyNC43ODljMTMuNjY4LDAsMjQuNzg5LTExLjEyLDI0Ljc4OS0yNC43ODkNCgkJCXMtMTEuMTIxLTI0Ljc4OS0yNC43ODktMjQuNzg5QzMxNi44MTgsMzQyLjI4OSwzMDUuNjk1LDM1My40MDgsMzA1LjY5NSwzNjcuMDc3eiIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDpub25lOyIgcG9pbnRzPSIxNzUuMTY1LDI1MC4xNyAyMzAuMTU4LDI1MC4xNyAyMzAuMTU4LDE2Ni4yMDcgMTYxLjM3MSwxNjYuMjA3IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOm5vbmU7IiBwb2ludHM9IjMzNC4yNjEsMjUwLjE3IDM3NS42NCwyNTAuMTcgMzkyLjI5OCwxNjYuMjA3IDM0Ni4zMTQsMTY2LjIwNyAJCSIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDpub25lOyIgcG9pbnRzPSIyNTQuMTU4LDI1MC4xNyAzMTAuMDE1LDI1MC4xNyAzMjIuMDY4LDE2Ni4yMDcgMjU0LjE1OCwxNjYuMjA3IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiM3M0QwRjQ7IiBwb2ludHM9Ijg3LjEwOSwxNDIuMjA4IDM5Ny4wNiwxNDIuMjA4IDQwNC4wMDksMTA3LjE4OCA4MC4zMiwxMDcuMTg4IAkJIi8+DQoJCTxwYXRoIHN0eWxlPSJmaWxsOiMzRDY4ODk7IiBkPSJNNDI3Ljg5OCw4Ny41NzNjLTIuMjc5LTIuNzc2LTUuNjgyLTQuMzg2LTkuMjczLTQuMzg2SDc1LjY2OEw2NC4yODksMjQuNDc0DQoJCQljLTEuMDk0LTUuNjQyLTYuMDM1LTkuNzE3LTExLjc4MS05LjcxN0gxMmMtNi42MjksMC0xMiw1LjM3My0xMiwxMnM1LjM3MSwxMiwxMiwxMmgzMC42MDlsNTEuNjc0LDI3MC40MDQNCgkJCWMxLjAxLDUuNzM4LDUuOTk0LDkuOTIyLDExLjgxOCw5LjkyMmg0Mi4zODhjLTIyLjc1Nyw0LjEyMi00MC4wNzYsMjQuMDY3LTQwLjA3Niw0Ny45OTVjMCwyNi45MDIsMjEuODg3LDQ4Ljc5LDQ4Ljc5LDQ4Ljc5DQoJCQljMjYuOTAyLDAsNDguNzg3LTIxLjg4Nyw0OC43ODctNDguNzljMC0yMy45MjctMTcuMzE2LTQzLjg3Mi00MC4wNzQtNDcuOTk1aDE1NS44NTVjLTIyLjc1OCw0LjEyMi00MC4wNzgsMjQuMDY3LTQwLjA3OCw0Ny45OTUNCgkJCWMwLDI2LjkwMiwyMS44ODksNDguNzksNDguNzkzLDQ4Ljc5YzI2LjkwMiwwLDQ4Ljc4OS0yMS44ODcsNDguNzg5LTQ4Ljc5YzAtMjMuOTI3LTE3LjMxOC00My44NzItNDAuMDc0LTQ3Ljk5NWgzNi41NDENCgkJCWM2LjYyNywwLDEyLTUuMzczLDEyLTEyYzAtNi42MjgtNS4zNzMtMTItMTItMTJIMTE2LjE3NkwxMTIuNSwyNzQuMTdoMjcyLjk5MmM1LjcyOSwwLDEwLjY1Ni00LjA0NywxMS43NzItOS42NjVsMzMuMTMxLTE2Ni45ODINCgkJCUM0MzEuMDkzLDk0LDQzMC4xNzcsOTAuMzQ5LDQyNy44OTgsODcuNTczeiBNMzU1LjI3NywzNjcuMDc3YzAsMTMuNjY5LTExLjEyMSwyNC43ODktMjQuNzg5LDI0Ljc4OQ0KCQkJYy0xMy42NywwLTI0Ljc5My0xMS4xMi0yNC43OTMtMjQuNzg5czExLjEyMy0yNC43ODksMjQuNzkzLTI0Ljc4OUMzNDQuMTU2LDM0Mi4yODksMzU1LjI3NywzNTMuNDA4LDM1NS4yNzcsMzY3LjA3N3oNCgkJCSBNMTgxLjk5MiwzNjcuMDc3YzAsMTMuNjY5LTExLjExOSwyNC43ODktMjQuNzg3LDI0Ljc4OWMtMTMuNjcsMC0yNC43OTEtMTEuMTItMjQuNzkxLTI0Ljc4OXMxMS4xMjEtMjQuNzg5LDI0Ljc5MS0yNC43ODkNCgkJCUMxNzAuODcyLDM0Mi4yODksMTgxLjk5MiwzNTMuNDA4LDE4MS45OTIsMzY3LjA3N3ogTTEwOC4wMzUsMjUwLjE3TDkxLjc2LDE2Ni4yMDdoNDUuMjlsMTMuNzk1LDgzLjk2M0gxMDguMDM1eiBNMjMwLjE1OCwyNTAuMTcNCgkJCWgtNTQuOTkybC0xMy43OTUtODMuOTYzaDY4Ljc4N1YyNTAuMTd6IE0zMTAuMDE1LDI1MC4xN2gtNTUuODU3di04My45NjNoNjcuOTFMMzEwLjAxNSwyNTAuMTd6IE0zNzUuNjQsMjUwLjE3aC00MS4zNzkNCgkJCWwxMi4wNTMtODMuOTYzaDQ1Ljk4NEwzNzUuNjQsMjUwLjE3eiBNMzk3LjA2LDE0Mi4yMDhIODcuMTA5bC02Ljc4OS0zNS4wMmgzMjMuNjg5TDM5Ny4wNiwxNDIuMjA4eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K",
+  "installationActionSet": [
+    {
+      "type": "contenttypes",
+      "path": "/development/demoAccount",
+      "method": "PUT",
+      "body": {
+        "name": "demoAccount",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoAccount",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "type",
+            "type": "SelectableString",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Type",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": null,
+              "inValues": [
+                {
+                  "key": "github",
+                  "label": "Github"
+                },
+                {
+                  "key": "stackoverflow",
+                  "label": "Stackoverflow"
+                },
+                {
+                  "key": "twitter",
+                  "label": "Twitter"
+                },
+                {
+                  "key": "linkedin",
+                  "label": "LinkedIn"
+                }
+              ]
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "link",
+            "type": "String",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoAccount"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoBynderImage",
+      "method": "PUT",
+      "body": {
+        "name": "demoBynderImage",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoBynderImage",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "bynderImage",
+            "type": "OpenUiExtension",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Bynder Image",
+              "hint": "",
+              "layoutColumn": 1,
+              "extensionType": "bynder"
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoBynderImage"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoUnsplashImage",
+      "method": "PUT",
+      "body": {
+        "name": "demoUnsplashImage",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoUnsplashImage",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "unsplashImage",
+            "type": "OpenUiExtension",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Unsplash Image",
+              "hint": "",
+              "layoutColumn": 1,
+              "extensionType": "unsplash"
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoUnsplashImage"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoExternalLink",
+      "method": "PUT",
+      "body": {
+        "name": "demoExternalLink",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoExternalLink",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "externalLink",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "External Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoExternalLink"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoImage",
+      "method": "PUT",
+      "body": {
+        "name": "demoImage",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoImage",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "image",
+            "type": "SelectableFieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Image",
+              "hint": "",
+              "layoutColumn": 1,
+              "contentPickerType": "links",
+              "showFieldGroupNames": false
+            },
+            "validations": {
+              "maxItem": null
+            },
+            "defaultValue": [],
+            "fieldGroupTypes": [
+              "demoBynderImage",
+              "demoExternalLink",
+              "imagelink",
+              "demoUnsplashImage"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoImage"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoGuidedSellingOption",
+      "method": "PUT",
+      "body": {
+        "name": "demoGuidedSellingOption",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoGuidedSellingOption",
+          "layout": "three-column"
+        },
+        "fields": [
+          {
+            "name": "label",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Label",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "value",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Value",
+              "hint": "",
+              "layoutColumn": 2,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "icon",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Icon",
+              "hint": "",
+              "layoutColumn": 3
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoGuidedSellingOption"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoLink",
+      "method": "PUT",
+      "body": {
+        "name": "demoLink",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoLink",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "label",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Label",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "primaryLink",
+            "type": "SelectableFieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "contentPickerType": "links",
+              "showFieldGroupNames": false
+            },
+            "validations": {
+              "maxItem": null
+            },
+            "defaultValue": [],
+            "fieldGroupTypes": [
+              "demoExternalLink",
+              "anylink"
+            ]
+          },
+          {
+            "name": "altLink",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Alt Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "openInNewWindow",
+            "type": "Boolean",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Open in new window",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Checkbox"
+            },
+            "validations": {},
+            "defaultValue": [
+              false
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoLink"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoProductPicker",
+      "method": "PUT",
+      "body": {
+        "name": "demoProductPicker",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoProductPicker",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "productPicker",
+            "type": "OpenUiExtension",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Related Products",
+              "hint": "",
+              "layoutColumn": 1,
+              "extensionType": "productPicker"
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoProductPicker"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoBannerLink",
+      "method": "PUT",
+      "body": {
+        "name": "demoBannerLink",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoBannerLink",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "bannerLink",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Banner Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoBannerLink"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoSidebar",
+      "method": "PUT",
+      "body": {
+        "name": "demoSidebar",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoSidebar",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "dynamicdropdown",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Connector Id",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": "brsm.account.list",
+              "inValues": null
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "sidebarItem",
+            "type": "SelectableFieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Sidebar Item",
+              "hint": "",
+              "layoutColumn": 1,
+              "contentPickerType": "links",
+              "showFieldGroupNames": false
+            },
+            "validations": {
+              "maxItem": null
+            },
+            "defaultValue": [],
+            "fieldGroupTypes": [
+              "demoBannerLink",
+              "demoProductPicker"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoSidebar"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoExternalVideo",
+      "method": "PUT",
+      "body": {
+        "name": "demoExternalVideo",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoExternalVideo",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "videoType",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Video Type",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": null,
+              "inValues": [
+                {
+                  "key": "youtube",
+                  "label": "YouTube"
+                },
+                {
+                  "key": "dailymotion",
+                  "label": "Dailymotion"
+                },
+                {
+                  "key": "vimeo",
+                  "label": "Vimeo"
+                }
+              ]
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "videoId",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Video Id",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoExternalVideo"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoInternalVideo",
+      "method": "PUT",
+      "body": {
+        "name": "demoInternalVideo",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoInternalVideo",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "internalLink",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Internal Link",
+              "hint": "",
+              "layoutColumn": 1,
+              "lookupFolderPath": "/content/assets",
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoInternalVideo"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoCallToAction",
+      "method": "PUT",
+      "body": {
+        "name": "demoCallToAction",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoCallToAction",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "name",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Name",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "info",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Additional Info",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "image",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Image",
+              "hint": "",
+              "layoutColumn": 2,
+              "uploadEnabled": true,
+              "displayType": "ImageLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": "gallerypicker-imagelink",
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "internallink",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Internal Link",
+              "hint": "",
+              "layoutColumn": 2,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "externallink",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "External Link",
+              "hint": "",
+              "layoutColumn": 2,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoCallToAction"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoParagraph",
+      "method": "PUT",
+      "body": {
+        "name": "demoParagraph",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoParagraph",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "description",
+            "type": "RichText",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null,
+              "imagepickerBasePath": null,
+              "imagepickerType": "images",
+              "imagepickerNodetypes": null,
+              "imagepickerLastVisitedEnabled": null,
+              "imagepickerLastVisitedGroupKey": "ckeditor-imagepicker",
+              "imagepickerLastVisitedNodetypes": [
+                "gallery"
+              ],
+              "imagepickerPreferredImageVariant": "original",
+              "linkpickerBasePath": null,
+              "linkpickerType": "documents",
+              "linkpickerNodetypes": null,
+              "linkpickerLastVisitedEnabled": null,
+              "linkpickerLastVisitedGroupKey": "ckeditor-linkpicker",
+              "linkpickerLastVisitedNodetypes": [
+                "folder"
+              ],
+              "linkPickerLanguageContextAware": null,
+              "linkPickerOpenInNewWindowEnabled": true,
+              "includeImageVariants": null,
+              "excludeImageVariants": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoParagraph"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoBannerCta",
+      "method": "PUT",
+      "body": {
+        "name": "demoBannerCta",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoBannerCta",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "RichText",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Content",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null,
+              "imagepickerBasePath": null,
+              "imagepickerType": "images",
+              "imagepickerNodetypes": null,
+              "imagepickerLastVisitedEnabled": null,
+              "imagepickerLastVisitedGroupKey": "ckeditor-imagepicker",
+              "imagepickerLastVisitedNodetypes": [
+                "gallery"
+              ],
+              "imagepickerPreferredImageVariant": "original",
+              "linkpickerBasePath": null,
+              "linkpickerType": "documents",
+              "linkpickerNodetypes": null,
+              "linkpickerLastVisitedEnabled": null,
+              "linkpickerLastVisitedGroupKey": "ckeditor-linkpicker",
+              "linkpickerLastVisitedNodetypes": [
+                "folder"
+              ],
+              "linkPickerLanguageContextAware": null,
+              "linkPickerOpenInNewWindowEnabled": true,
+              "includeImageVariants": null,
+              "excludeImageVariants": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "cta",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Cta",
+              "hint": "",
+              "layoutColumn": 2,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "link",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Link",
+              "hint": "",
+              "layoutColumn": 2,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoBannerCta"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoSeoTag",
+      "method": "PUT",
+      "body": {
+        "name": "demoSeoTag",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoSeoTag",
+          "layout": "horizontal"
+        },
+        "fields": [
+          {
+            "name": "tag",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Tag",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "value",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Value",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoSeoTag"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoSeo",
+      "method": "PUT",
+      "body": {
+        "name": "demoSeo",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoSeo",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "seoTitle",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "SEO Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "seoDescription",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "SEO Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoSeo"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoSlotBanner",
+      "method": "PUT",
+      "body": {
+        "name": "demoSlotBanner",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoSlotBanner",
+          "layout": "horizontal"
+        },
+        "fields": [
+          {
+            "name": "banner",
+            "type": "Link",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Banner",
+              "hint": "",
+              "layoutColumn": 1,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": [
+                "demoBanner"
+              ],
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "slot",
+            "type": "Integer",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Slot",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              0
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoSlotBanner"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoTypeform",
+      "method": "PUT",
+      "body": {
+        "name": "demoTypeform",
+        "type": "FieldGroup",
+        "presentation": {
+          "displayName": "demoTypeform",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "header",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Form Header",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoTypeform"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoArticle",
+      "method": "PUT",
+      "body": {
+        "name": "demoArticle",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoArticle",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Text"
+            },
+            "validations": {
+              "maxRow": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "introduction",
+            "type": "RichText",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Introduction",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null,
+              "imagepickerBasePath": null,
+              "imagepickerType": "images",
+              "imagepickerNodetypes": null,
+              "imagepickerLastVisitedEnabled": null,
+              "imagepickerLastVisitedGroupKey": "ckeditor-imagepicker",
+              "imagepickerLastVisitedNodetypes": [
+                "gallery"
+              ],
+              "imagepickerPreferredImageVariant": "original",
+              "linkpickerBasePath": null,
+              "linkpickerType": "documents",
+              "linkpickerNodetypes": null,
+              "linkpickerLastVisitedEnabled": null,
+              "linkpickerLastVisitedGroupKey": "ckeditor-linkpicker",
+              "linkpickerLastVisitedNodetypes": [
+                "folder"
+              ],
+              "linkPickerLanguageContextAware": null,
+              "linkPickerOpenInNewWindowEnabled": true,
+              "includeImageVariants": null,
+              "excludeImageVariants": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "entries",
+            "type": "SelectableFieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Additional Entries",
+              "hint": "",
+              "layoutColumn": 1,
+              "contentPickerType": "links",
+              "showFieldGroupNames": false
+            },
+            "validations": {
+              "maxItem": null
+            },
+            "defaultValue": [],
+            "fieldGroupTypes": [
+              "demoCallToAction",
+              "demoParagraph"
+            ]
+          },
+          {
+            "name": "sourceUrl",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Source",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "keywordsTagCloud",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Keywords",
+              "hint": "Comma separated keywords.",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "images",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Images",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          },
+          {
+            "name": "sidebar",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Sidebar",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "sidebarItem": [],
+                  "dynamicdropdown": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoSidebar"
+          },
+          {
+            "name": "tags",
+            "type": "String",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Tags",
+              "hint": "",
+              "layoutColumn": 2,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "date",
+            "type": "Date",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Date",
+              "hint": "",
+              "layoutColumn": 2,
+              "timeSelectable": true
+            },
+            "validations": {},
+            "defaultValue": []
+          },
+          {
+            "name": "authors",
+            "type": "Link",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Authors",
+              "hint": "",
+              "layoutColumn": 2,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoArticle"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoAuthor",
+      "method": "PUT",
+      "body": {
+        "name": "demoAuthor",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoAuthor",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "fullName",
+            "type": "String",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Name",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "role",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Role",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "Html",
+            "required": true,
+            "multiple": false,
+            "presentation": {
+              "caption": "Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "picture",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Picture",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          },
+          {
+            "name": "accounts",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Accounts",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "link": [
+                    ""
+                  ],
+                  "type": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoAccount"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoAuthor"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoBanner",
+      "method": "PUT",
+      "body": {
+        "name": "demoBanner",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoBanner",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "RichText",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Content",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null,
+              "imagepickerBasePath": null,
+              "imagepickerType": "images",
+              "imagepickerNodetypes": null,
+              "imagepickerLastVisitedEnabled": null,
+              "imagepickerLastVisitedGroupKey": "ckeditor-imagepicker",
+              "imagepickerLastVisitedNodetypes": [
+                "gallery"
+              ],
+              "imagepickerPreferredImageVariant": "original",
+              "linkpickerBasePath": null,
+              "linkpickerType": "documents",
+              "linkpickerNodetypes": null,
+              "linkpickerLastVisitedEnabled": null,
+              "linkpickerLastVisitedGroupKey": "ckeditor-linkpicker",
+              "linkpickerLastVisitedNodetypes": [
+                "folder"
+              ],
+              "linkPickerLanguageContextAware": null,
+              "linkPickerOpenInNewWindowEnabled": true,
+              "includeImageVariants": null,
+              "excludeImageVariants": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "keywordsTagCloud",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Keywords",
+              "hint": "Comma separated keywords.",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "links",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Links",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "primaryLink": [],
+                  "label": [
+                    ""
+                  ],
+                  "altLink": [
+                    ""
+                  ],
+                  "openInNewWindow": [
+                    false
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoLink"
+          },
+          {
+            "name": "images",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Images",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoBanner"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoCampaign",
+      "method": "PUT",
+      "body": {
+        "name": "demoCampaign",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoCampaign",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Content",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "images",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Images",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          },
+          {
+            "name": "resource",
+            "type": "EmbeddedResource",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Resource",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "filename": "hippo:resource",
+                "binarydata": "",
+                "mimeType": "application/vnd.hippo.blank"
+              }
+            ]
+          },
+          {
+            "name": "links",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Links",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "primaryLink": [],
+                  "label": [
+                    ""
+                  ],
+                  "altLink": [
+                    ""
+                  ],
+                  "openInNewWindow": [
+                    false
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoLink"
+          },
+          {
+            "name": "dynamicdropdown",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Connector Id",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": "brsm.account.list",
+              "inValues": null
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "productPicker",
+            "type": "OpenUiExtension",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Product Picker",
+              "hint": "",
+              "layoutColumn": 1,
+              "extensionType": "productPicker"
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoCampaign"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoCategoryDecorator",
+      "method": "PUT",
+      "body": {
+        "name": "demoCategoryDecorator",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoCategoryDecorator",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "description",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "image",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Image",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          },
+          {
+            "name": "connectorid",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Connector Id",
+              "hint": "",
+              "layoutColumn": 2,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": false
+            },
+            "validations": {
+              "inResourceBundle": "brsm.account.list",
+              "inValues": null
+            },
+            "defaultValue": [
+              "HOME"
+            ]
+          },
+          {
+            "name": "slotBanner",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Slot Banner",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "banner": [
+                    "/"
+                  ],
+                  "slot": [
+                    0
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoSlotBanner"
+          },
+          {
+            "name": "relatedexdocids",
+            "type": "OpenUiExtension",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Related External Category",
+              "hint": "",
+              "layoutColumn": 2,
+              "extensionType": "categoryPicker"
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoCategoryDecorator"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoContent",
+      "method": "PUT",
+      "body": {
+        "name": "demoContent",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoContent",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "introduction",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Introduction",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Text"
+            },
+            "validations": {
+              "maxRow": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "RichText",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Content",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null,
+              "imagepickerBasePath": null,
+              "imagepickerType": "images",
+              "imagepickerNodetypes": null,
+              "imagepickerLastVisitedEnabled": null,
+              "imagepickerLastVisitedGroupKey": "ckeditor-imagepicker",
+              "imagepickerLastVisitedNodetypes": [
+                "gallery"
+              ],
+              "imagepickerPreferredImageVariant": "original",
+              "linkpickerBasePath": null,
+              "linkpickerType": "documents",
+              "linkpickerNodetypes": null,
+              "linkpickerLastVisitedEnabled": null,
+              "linkpickerLastVisitedGroupKey": "ckeditor-linkpicker",
+              "linkpickerLastVisitedNodetypes": [
+                "folder"
+              ],
+              "linkPickerLanguageContextAware": null,
+              "linkPickerOpenInNewWindowEnabled": true,
+              "includeImageVariants": null,
+              "excludeImageVariants": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "publicationDate",
+            "type": "Date",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Publication Date",
+              "hint": "",
+              "layoutColumn": 2,
+              "timeSelectable": true
+            },
+            "validations": {},
+            "defaultValue": []
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoContent"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoGuidedSellingStep",
+      "method": "PUT",
+      "body": {
+        "name": "demoGuidedSellingStep",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoGuidedSellingStep",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "key",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Key",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": null,
+              "inValues": [
+                {
+                  "key": "segment",
+                  "label": "Segment"
+                },
+                {
+                  "key": "filter",
+                  "label": "Filter"
+                }
+              ]
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "text",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Text",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "options",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Options",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "icon": [
+                    {
+                      "fields": {
+                        "image": []
+                      }
+                    }
+                  ],
+                  "label": [
+                    ""
+                  ],
+                  "value": [
+                    ""
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoGuidedSellingOption"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoGuidedSellingStep"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoGuidedSellingFlow",
+      "method": "PUT",
+      "body": {
+        "name": "demoGuidedSellingFlow",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoGuidedSellingFlow",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "header",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Header",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "steps",
+            "type": "Link",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Steps",
+              "hint": "",
+              "layoutColumn": 1,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": [
+                "demoGuidedSellingStep"
+              ],
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "footer",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Footer",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "image",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Image",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoGuidedSellingFlow"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoProductDecorator",
+      "method": "PUT",
+      "body": {
+        "name": "demoProductDecorator",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoProductDecorator",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "description",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "image",
+            "type": "Link",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Image",
+              "hint": "",
+              "layoutColumn": 1,
+              "uploadEnabled": true,
+              "displayType": "ImageLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": "gallerypicker-imagelink",
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "demoVideoLinks",
+            "type": "Link",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Videos",
+              "hint": "",
+              "layoutColumn": 1,
+              "lookupFolderPath": null,
+              "lastVisitedNodetypes": null,
+              "languageContextAware": true,
+              "pickerType": null,
+              "displayType": "AnyLink",
+              "lookupFolderTypes": null,
+              "lastVisitedKey": null,
+              "lastVisitedEnabled": true
+            },
+            "validations": {},
+            "defaultValue": [
+              "/"
+            ]
+          },
+          {
+            "name": "images",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Images",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoProductDecorator"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoProductShowcase",
+      "method": "PUT",
+      "body": {
+        "name": "demoProductShowcase",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoProductShowcase",
+          "layout": "two-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "content",
+            "type": "Html",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Content",
+              "hint": "",
+              "layoutColumn": 1,
+              "ckEditorAppendedJson": null,
+              "ckEditorOverlayedJson": null
+            },
+            "validations": {},
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "images",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Images",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "image": []
+                }
+              }
+            ],
+            "fieldGroupType": "demoImage"
+          },
+          {
+            "name": "links",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "Links",
+              "hint": "",
+              "layoutColumn": 2
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "primaryLink": [],
+                  "label": [
+                    ""
+                  ],
+                  "altLink": [
+                    ""
+                  ],
+                  "openInNewWindow": [
+                    false
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoLink"
+          },
+          {
+            "name": "dynamicdropdown",
+            "type": "SelectableString",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Connector Id",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Dropdown",
+              "sortOrder": null,
+              "sortBy": null,
+              "showDefault": null
+            },
+            "validations": {
+              "inResourceBundle": "brsm.account.list",
+              "inValues": null
+            },
+            "defaultValue": []
+          },
+          {
+            "name": "productPicker",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Product Picker",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "productPicker": [
+                    ""
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoProductPicker"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoProductShowcase"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoVideo",
+      "method": "PUT",
+      "body": {
+        "name": "demoVideo",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoVideo",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "link",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Video URL",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "description",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Description",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Text"
+            },
+            "validations": {
+              "maxRow": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "demoVideoItem",
+            "type": "SelectableFieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Video Item",
+              "hint": "",
+              "layoutColumn": 1,
+              "contentPickerType": "links",
+              "showFieldGroupNames": false
+            },
+            "validations": {
+              "maxItem": null
+            },
+            "defaultValue": [],
+            "fieldGroupTypes": [
+              "demoInternalVideo",
+              "demoExternalVideo"
+            ]
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoVideo"
+    },
+    {
+      "type": "contenttypes",
+      "path": "/development/demoSeoPage",
+      "method": "PUT",
+      "body": {
+        "name": "demoSeoPage",
+        "type": "Document",
+        "presentation": {
+          "displayName": "demoSeoPage",
+          "layout": "one-column"
+        },
+        "fields": [
+          {
+            "name": "title",
+            "type": "String",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "Title",
+              "hint": "",
+              "layoutColumn": 1,
+              "displayType": "Simple"
+            },
+            "validations": {
+              "maxLength": null
+            },
+            "defaultValue": [
+              ""
+            ]
+          },
+          {
+            "name": "seo",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": false,
+            "presentation": {
+              "caption": "SEO",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "seoDescription": [
+                    ""
+                  ],
+                  "seoTitle": [
+                    ""
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoSeo"
+          },
+          {
+            "name": "seoTag",
+            "type": "FieldGroup",
+            "required": false,
+            "multiple": true,
+            "presentation": {
+              "caption": "SEO Tag",
+              "hint": "",
+              "layoutColumn": 1
+            },
+            "validations": {},
+            "defaultValue": [
+              {
+                "fields": {
+                  "tag": [
+                    ""
+                  ],
+                  "value": [
+                    ""
+                  ]
+                }
+              }
+            ],
+            "fieldGroupType": "demoSeoTag"
+          }
+        ]
+      },
+      "responseCode": 201,
+      "description": "create content type: demoSeoPage"
+    }
+  ]
+}
