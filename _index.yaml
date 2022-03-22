@@ -4,19 +4,19 @@ pre-import:
       - categoryPicker-ui-extension: categoryPicker-ui-extension.yaml
       - productPicker-ui-extension: productPicker-ui-extension.yaml
       - unsplash-ui-extension: unsplash-ui-extension.yaml
-  - /content/documents/administration:
-      - component-configuration: component-configuration.yaml
-      - brsm-account-list: brsm-account-list.yaml
-  - /content/gallery:
-      - pacific-home: gallery-pacific-home.yaml
-  - /content/gallery/pacific-home:
-      - articles: gallery/articles.zip
-      - authors: gallery/authors.zip
-      - banners: gallery/banners.zip
-      - branding: gallery/branding.zip
-      - categories: gallery/categories.zip
-      - icons: gallery/icons.zip
-      - refresh: gallery/refresh.zip
+#  - /content/documents/administration:
+#      - component-configuration: component-configuration.yaml
+#      - brsm-account-list: brsm-account-list.yaml
+#  - /content/gallery:
+#      - pacific-home: gallery-pacific-home.yaml
+#  - /content/gallery/pacific-home:
+#      - articles: gallery/articles.zip
+#      - authors: gallery/authors.zip
+#      - banners: gallery/banners.zip
+#      - branding: gallery/branding.zip
+#      - categories: gallery/categories.zip
+#      - icons: gallery/icons.zip
+#      - refresh: gallery/refresh.zip
 #  - /content/assets:
 #      - pacific-home: assets-pacific-home.zip
 post-import:
