@@ -11,11 +11,11 @@ pre-import:
       - pacific-home: gallery-pacific-home.zip
   - /content/assets:
       - pacific-home: assets-pacific-home.zip
-post-import:
-  - /hst:brxsaas/hst:blueprints:
-    - new-pacific-home-website: new-pacific-home-website.zip
-  - /hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates:
-    - new-pacific-home-website: content-new-pacific-home-website.zip
+#post-import:
+#  - /hst:brxsaas/hst:blueprints:
+#    - new-pacific-home-website: new-pacific-home-website.zip
+#  - /hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates:
+#    - new-pacific-home-website: content-new-pacific-home-website.zip
 
 
 
