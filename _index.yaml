@@ -9,7 +9,7 @@ pre-import:
       - brsm-account-list: brsm-account-list.yaml
   - /content/path/content/gallery:
       - pacific-home: gallery-pacific-home.yaml
-  - /content/path/content/gallery/pacific-home:
+  - /content/gallery/pacific-home:
       - articles: gallery/articles.zip
       - authors: gallery/authors.zip
       - banners: gallery/banners.zip
@@ -17,7 +17,7 @@ pre-import:
       - categories: gallery/categories.zip
       - icons: gallery/icons.zip
       - refresh: gallery/refresh.zip
-  - /content/path/content/assets:
+  - /content/assets:
       - pacific-home: assets-pacific-home.zip
 post-import:
   - /hst:brxsaas/hst:blueprints:
