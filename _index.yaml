@@ -1,9 +1,9 @@
 pre-import:
   - /hippo:configuration/hippo:frontend/cms/ui-extensions:
-      - bynder-ui-extension: bynder-ui-extension.yaml
-      - categoryPicker-ui-extension: categoryPicker-ui-extension.yaml
-      - productPicker-ui-extension: productPicker-ui-extension.yaml
-      - unsplash-ui-extension: unsplash-ui-extension.yaml
+      - bynder: bynder-ui-extension.yaml
+      - categoryPicker: categoryPicker-ui-extension.yaml
+      - productPicker: productPicker-ui-extension.yaml
+      - unsplash: unsplash-ui-extension.yaml
 #  - /content/documents/administration:
 #      - component-configuration: component-configuration.yaml
 #      - brsm-account-list: brsm-account-list.yaml
