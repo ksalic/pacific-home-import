@@ -25,6 +25,7 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
         log.debug("start")
         log.debug(configurationService.getClass().getSimpleName())
         def imp = FileUtils.getFile(FileUtils.getTempDirectory(), "import");
+        FileUtils.deleteDirectory(imp)
         imp.mkdir();
         log.debug(imp.getAbsolutePath());
         def index = FileUtils.getFile(imp.getAbsolutePath(), "_index.yaml");
