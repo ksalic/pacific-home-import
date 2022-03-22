@@ -9,14 +9,6 @@ pre-import:
       - brsm-account-list: brsm-account-list.yaml
   - /content/gallery:
       - pacific-home: gallery-pacific-home.zip
-#  - /content/gallery/pacific-home:
-#      - articles: gallery/articles.zip
-#      - authors: gallery/authors.zip
-#      - banners: gallery/banners.zip
-#      - branding: gallery/branding.zip
-#      - categories: gallery/categories.zip
-#      - icons: gallery/icons.zip
-#      - refresh: gallery/refresh.zip
   - /content/assets:
       - pacific-home: assets-pacific-home.zip
 post-import:
