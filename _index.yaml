@@ -17,8 +17,8 @@ pre-import:
       - categories: gallery/categories.zip
       - icons: gallery/icons.zip
       - refresh: gallery/refresh.zip
-  - /content/assets:
-      - pacific-home: assets-pacific-home.zip
+#  - /content/assets:
+#      - pacific-home: assets-pacific-home.zip
 post-import:
   - /hst:brxsaas/hst:blueprints:
     - new-pacific-home-website: new-pacific-home-website.yaml
