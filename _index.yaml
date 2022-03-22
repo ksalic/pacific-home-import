@@ -4,11 +4,11 @@ pre-import:
       - categoryPicker: categoryPicker-ui-extension.yaml
       - productPicker: productPicker-ui-extension.yaml
       - unsplash: unsplash-ui-extension.yaml
-#  - /content/documents/administration:
-#      - component-configuration: component-configuration.yaml
-#      - brsm-account-list: brsm-account-list.yaml
-#  - /content/gallery:
-#      - pacific-home: gallery-pacific-home.yaml
+  - /content/documents/administration:
+      - component-configuration: component-configuration.yaml
+      - brsm-account-list: brsm-account-list.yaml
+  - /content/gallery:
+      - pacific-home: gallery-pacific-home.zip
 #  - /content/gallery/pacific-home:
 #      - articles: gallery/articles.zip
 #      - authors: gallery/authors.zip
