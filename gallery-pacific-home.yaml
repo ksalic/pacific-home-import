@@ -1,7 +1,0 @@
-/pacific-home:
-  jcr:primaryType: hippogallery:stdImageGallery
-  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
-  jcr:uuid: 536206ea-2125-4e57-8b56-1cc6b03c1682
-  hippo:name: Pacific Home
-  hippostd:foldertype: [new-imageset-folder]
-  hippostd:gallerytype: ['xm:imageset']
