@@ -10,8 +10,10 @@ import org.yaml.snakeyaml.Yaml
 import javax.jcr.Node
 import javax.jcr.RepositoryException
 import javax.jcr.Session
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 
-class UpdaterTemplate extends BaseNodeUpdateVisitor {
+class UpdaterEditor extends BaseNodeUpdateVisitor {
 
 
     final ConfigurationService configurationService = HippoServiceRegistry.getService(ConfigurationService.class);
@@ -64,6 +66,49 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
             }
 
         }
+
+        def compressedExport = FileUtils.getFile(destDir, "dirCompressed.zip")
+        def fos = FileUtils.openOutputStream(compressedExport);
+        ZipOutputStream zipOut = new ZipOutputStream(fos);
+        def fileToZip = destDir;
+
+        zipFile(fileToZip, fileToZip.getName(), zipOut);
+        zipOut.close();
+        fos.close();
+
+        def exportNode = node.addNode("export" + UUID.randomUUID().toString(), "nt:unstructured");
+        exportNode.setProperty("zip", FileUtils.openInputStream(compressedExport));
+
+
+    }
+
+    private static void zipFile(def fileToZip, String fileName, ZipOutputStream zipOut) throws IOException {
+        if (fileToZip.isHidden()) {
+            return;
+        }
+        if (fileToZip.isDirectory()) {
+            if (fileName.endsWith("/")) {
+                zipOut.putNextEntry(new ZipEntry(fileName));
+                zipOut.closeEntry();
+            } else {
+                zipOut.putNextEntry(new ZipEntry(fileName + "/"));
+                zipOut.closeEntry();
+            }
+            def children = fileToZip.listFiles();
+            for (def childFile : children) {
+                zipFile(childFile, fileName + "/" + childFile.getName(), zipOut);
+            }
+            return;
+        }
+        def fis = FileUtils.openInputStream(fileToZip);
+        ZipEntry zipEntry = new ZipEntry(fileName);
+        zipOut.putNextEntry(zipEntry);
+        byte[] bytes = new byte[1024];
+        int length;
+        while ((length = fis.read(bytes)) >= 0) {
+            zipOut.write(bytes, 0, length);
+        }
+        fis.close();
     }
 
 
