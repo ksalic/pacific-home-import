@@ -32,40 +32,48 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
         server.setValuesFileURL("https://raw.githubusercontent.com/ksalic/pacific-home-import/master/_index.yaml")
         FileUtils.copyURLToFile(server.getValuesFileURL(), index)
         def destDir = FileUtils.getFile(FileUtils.getTempDirectory(), "export");
+        FileUtils.deleteDirectory(destDir)
         destDir.mkdir();
 
         Yaml yaml = new Yaml()
         LinkedHashMap<String, ArrayList> load = yaml.load(FileUtils.openInputStream(index))
         log.debug(load.toString());
 //        List preImport = load.get("pre-import");
-        for(Map.Entry<String, ArrayList> entry: load.entrySet()){
+        for (Map.Entry<String, ArrayList> entry : load.entrySet()) {
             def importElement = entry.getValue()
             for (LinkedHashMap<String, List<Map<String, String>>> importItem : importElement) {
                 String path = importItem.entrySet().getAt(0).getKey();
-                Node parentNode = node.getSession().getNode(path);
-                log.debug(parentNode.getPath())
-                List<Map<String, String>> items = importItem.entrySet().getAt(0).getValue();
-                for (Map<String, String> item : items) {
-                    Map.Entry<String, String> itemEntry = item.entrySet().getAt(0)
-                    String relativePath = itemEntry.getKey();
-                    String fileName = itemEntry.getValue();
+                if (node.getSession().itemExists(path)) {
+                    Node parentNode = node.getSession().getNode(path);
+                    log.debug(parentNode.getPath())
+                    List<Map<String, String>> items = importItem.entrySet().getAt(0).getValue();
+                    for (Map<String, String> item : items) {
+                        Map.Entry<String, String> itemEntry = item.entrySet().getAt(0)
+                        String relativePath = itemEntry.getKey();
+                        String fileName = itemEntry.getValue();
 
-                    log.debug("checking.." + relativePath);
-                    if (parentNode.hasNode(relativePath)) {
-                        log.debug("has node..")
-                        Node export = parentNode.getNode(relativePath)
-                        log.debug("entering existing node..")
+                        log.debug("checking.." + relativePath);
+                        if (parentNode.hasNode(relativePath)) {
+                            log.debug("has node..")
+                            Node export = parentNode.getNode(relativePath)
+                            log.debug("entering existing node..")
 
-                        def file = FileUtils.getFile(destDir, fileName);
-                        if (fileName.endsWith(".zip")) {
-                            FileUtils.copyFile(configurationService.exportZippedContent(export), file);
-                        } else {
-                            FileUtils.writeStringToFile(file, configurationService.exportContent(export), "UTF-8");
+                            def file = FileUtils.getFile(destDir, fileName);
+                            if (fileName.endsWith(".zip")) {
+                                FileUtils.copyFile(configurationService.exportZippedContent(export), file);
+                            } else {
+                                FileUtils.writeStringToFile(file, configurationService.exportContent(export), "UTF-8");
+                            }
+                        }else {
+                            log.debug("node does not exist")
                         }
+
+
                     }
-
-
+                } else {
+                    log.debug("node " + path + " does not exist, unable to export")
                 }
+
 
             }
         }
