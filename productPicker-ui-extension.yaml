@@ -1,0 +1,10 @@
+/productPicker:
+  jcr:primaryType: frontend:uiExtension
+  jcr:mixinTypes: ['hippostd:relaxed']
+  frontend:config: '{"dataMode":"multiple","title":"Product Picker","size":"large",
+    "application": "productPicker", "query": "couch", "pageSize" :"16", "connectorIdField"
+    : "brxsaas:connectorid"}'
+  frontend:displayName: External Product Picker
+  frontend:extensionPoint: document.field
+  frontend:initialHeightInPixels: 200
+  frontend:url: https://pacific-ui-extensions.herokuapp.com/product-picker
