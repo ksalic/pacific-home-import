@@ -16,7 +16,6 @@ import java.util.regex.Pattern
 
 class UpdaterTemplate extends BaseNodeUpdateVisitor {
 
-  //xpath query: /jcr:root/content/documents/element(pacific-home,hippostd:folder)
   private static final String CONFIG_PATH = "/hst:brxsaas/hst:configurations/"
   private static final String NEW_PACIFIC_HOME_WEBSITE = "new-pacific-home-website";
   private static final String QUERY_TEMPLATE_DIR = "/hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates/";
@@ -100,7 +99,7 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
 
       if (getCopyHandler() != null) {
         JcrCopyUtils.copy(getSourceFolderNode(), getDestFolderNodeName(), getDestParentFolderNode(),
-          getCopyHandler());
+                getCopyHandler());
       } else {
         JcrCopyUtils.copy(getSourceFolderNode(), getDestFolderNodeName(), getDestParentFolderNode());
       }
@@ -132,29 +131,29 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
         resetHippoTranslatedNodeWithNewUuid(getDestFolderNode(), uuidMappings);
 
         JcrTraverseUtils.traverseNodes(getDestFolderNode(),
-          new NodeTraverser() {
-            @Override
-            public boolean isAcceptable(Node node) throws RepositoryException {
-              return node.isNodeType("hippotranslation:translated");
-            }
+                new NodeTraverser() {
+                  @Override
+                  public boolean isAcceptable(Node node) throws RepositoryException {
+                    return node.isNodeType("hippotranslation:translated");
+                  }
 
-            @Override
-            public boolean isTraversable(Node node) throws RepositoryException {
-              return !node.isNodeType("hippostdpubwf:document");
-            }
+                  @Override
+                  public boolean isTraversable(Node node) throws RepositoryException {
+                    return !node.isNodeType("hippostdpubwf:document");
+                  }
 
-            @Override
-            public void accept(Node translatedNode) throws RepositoryException {
-              resetHippoTranslatedNodeWithNewUuid(translatedNode, uuidMappings);
-            }
-          });
+                  @Override
+                  public void accept(Node translatedNode) throws RepositoryException {
+                    resetHippoTranslatedNodeWithNewUuid(translatedNode, uuidMappings);
+                  }
+                });
       } catch (RepositoryException e) {
         log.error("Failed to reset hippotranslation:id properties under {}.", destFolderNodePath, e);
       }
     }
 
     private void resetHippoTranslatedNodeWithNewUuid(final Node translatedNode, final Map<String, String> uuidMappings)
-      throws RepositoryException {
+            throws RepositoryException {
       if (translatedNode != null && translatedNode.isNodeType("hippotranslation:translated")) {
         String translationUuid = JcrUtils.getStringProperty(translatedNode, "hippotranslation:id", null);
 
@@ -185,42 +184,42 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
         destFolderNodePath = getDestFolderNode().getPath();
 
         JcrTraverseUtils.traverseNodes(getDestFolderNode(),
-          new NodeTraverser() {
-            private String sourceFolderBase = getSourceFolderNode().getPath() + "/";
+                new NodeTraverser() {
+                  private String sourceFolderBase = getSourceFolderNode().getPath() + "/";
 
-            @Override
-            public boolean isAcceptable(Node node) throws RepositoryException {
-              return node.isNodeType("hippo:mirror") && node.hasProperty("hippo:docbase");
-            }
+                  @Override
+                  public boolean isAcceptable(Node node) throws RepositoryException {
+                    return node.isNodeType("hippo:mirror") && node.hasProperty("hippo:docbase");
+                  }
 
-            @Override
-            public boolean isTraversable(Node node) throws RepositoryException {
-              return !node.isNodeType("hippo:mirror");
-            }
+                  @Override
+                  public boolean isTraversable(Node node) throws RepositoryException {
+                    return !node.isNodeType("hippo:mirror");
+                  }
 
-            @Override
-            public void accept(Node destLinkHolderNode) throws RepositoryException {
-              String destLinkDocBase = JcrUtils.getStringProperty(destLinkHolderNode, "hippo:docbase", null);
+                  @Override
+                  public void accept(Node destLinkHolderNode) throws RepositoryException {
+                    String destLinkDocBase = JcrUtils.getStringProperty(destLinkHolderNode, "hippo:docbase", null);
 
-              if (StringUtils.isNotBlank(destLinkDocBase)) {
-                try {
-                  Node sourceLinkedNode = getSession().getNodeByIdentifier(destLinkDocBase);
+                    if (StringUtils.isNotBlank(destLinkDocBase)) {
+                      try {
+                        Node sourceLinkedNode = getSession().getNodeByIdentifier(destLinkDocBase);
 
-                  if (StringUtils.startsWith(sourceLinkedNode.getPath(), sourceFolderBase)) {
-                    String sourceLinkedNodeRelPath = StringUtils.removeStart(sourceLinkedNode.getPath(),
-                      sourceFolderBase);
-                    Node destLinkedNode = JcrUtils.getNodeIfExists(getDestFolderNode(), sourceLinkedNodeRelPath);
+                        if (StringUtils.startsWith(sourceLinkedNode.getPath(), sourceFolderBase)) {
+                          String sourceLinkedNodeRelPath = StringUtils.removeStart(sourceLinkedNode.getPath(),
+                                  sourceFolderBase);
+                          Node destLinkedNode = JcrUtils.getNodeIfExists(getDestFolderNode(), sourceLinkedNodeRelPath);
 
-                    if (destLinkedNode != null) {
-                      log.info("Updating the linked node at '{}'.", destLinkHolderNode.getPath());
-                      destLinkHolderNode.setProperty("hippo:docbase", destLinkedNode.getIdentifier());
+                          if (destLinkedNode != null) {
+                            log.info("Updating the linked node at '{}'.", destLinkHolderNode.getPath());
+                            destLinkHolderNode.setProperty("hippo:docbase", destLinkedNode.getIdentifier());
+                          }
+                        }
+                      } catch (ItemNotFoundException ignore) {
+                      }
                     }
                   }
-                } catch (ItemNotFoundException ignore) {
-                }
-              }
-            }
-          });
+                });
       } catch (RepositoryException e) {
         log.error("Failed to reset link Nodes under destination folder: {}.", destFolderNodePath, e);
       }
@@ -236,40 +235,40 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
         destFolderNodePath = getDestFolderNode().getPath();
 
         JcrTraverseUtils.traverseNodes(getDestFolderNode(),
-          new NodeTraverser() {
-            @Override
-            public boolean isAcceptable(Node node) throws RepositoryException {
-              if (!node.isNodeType("hippostdpubwf:document")) {
-                return false;
-              }
+                new NodeTraverser() {
+                  @Override
+                  public boolean isAcceptable(Node node) throws RepositoryException {
+                    if (!node.isNodeType("hippostdpubwf:document")) {
+                      return false;
+                    }
 
-              return isLiveVariantNode(node) &&
-                StringUtils.equals("published", JcrUtils.getStringProperty(node, "hippostd:state", null));
-            }
-
-            @Override
-            public boolean isTraversable(Node node) throws RepositoryException {
-              return !node.isNodeType("hippostdpubwf:document");
-            }
-
-            private boolean isLiveVariantNode(final Node variantNode) throws RepositoryException {
-              if (variantNode.hasProperty("hippo:availability")) {
-                for (Value value : variantNode.getProperty("hippo:availability").getValues()) {
-                  if (StringUtils.equals("live", value.getString())) {
-                    return true;
+                    return isLiveVariantNode(node) &&
+                            StringUtils.equals("published", JcrUtils.getStringProperty(node, "hippostd:state", null));
                   }
-                }
-              }
 
-              return false;
-            }
+                  @Override
+                  public boolean isTraversable(Node node) throws RepositoryException {
+                    return !node.isNodeType("hippostdpubwf:document");
+                  }
 
-            @Override
-            public void accept(Node liveVariant) throws RepositoryException {
-              liveVariant.setProperty("hippo:availability", ArrayUtils.EMPTY_STRING_ARRAY);
-              liveVariant.setProperty("hippostd:stateSummary", "new");
-            }
-          });
+                  private boolean isLiveVariantNode(final Node variantNode) throws RepositoryException {
+                    if (variantNode.hasProperty("hippo:availability")) {
+                      for (Value value : variantNode.getProperty("hippo:availability").getValues()) {
+                        if (StringUtils.equals("live", value.getString())) {
+                          return true;
+                        }
+                      }
+                    }
+
+                    return false;
+                  }
+
+                  @Override
+                  public void accept(Node liveVariant) throws RepositoryException {
+                    liveVariant.setProperty("hippo:availability", ArrayUtils.EMPTY_STRING_ARRAY);
+                    liveVariant.setProperty("hippostd:stateSummary", "new");
+                  }
+                });
       } catch (RepositoryException e) {
         log.error("Failed to take offline link hippostd:publishableSummary nodes under {}.", destFolderNodePath, e);
       }
@@ -284,7 +283,7 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
     }
 
     public static Node copy(final Node srcNode, final String destNodeName, final Node destParentNode)
-      throws RepositoryException {
+            throws RepositoryException {
       return JcrUtils.copy(srcNode, destNodeName, destParentNode);
     }
 
@@ -390,34 +389,34 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
     protected void recomputeHippoPaths(final Node folderNode) {
       try {
         JcrTraverseUtils.traverseNodes(getDestFolderNode(),
-          new NodeTraverser() {
-            @Override
-            public boolean isAcceptable(Node node) throws RepositoryException {
-              if (!(node instanceof HippoNode)) {
-                return false;
-              }
+                new NodeTraverser() {
+                  @Override
+                  public boolean isAcceptable(Node node) throws RepositoryException {
+                    if (!(node instanceof HippoNode)) {
+                      return false;
+                    }
 
-              if (node.isNodeType(HippoNodeType.NT_DERIVED)) {
-                return true;
-              }
+                    if (node.isNodeType(HippoNodeType.NT_DERIVED)) {
+                      return true;
+                    }
 
-              if (node.isNodeType(HippoNodeType.NT_DOCUMENT) && node.hasProperty(HippoNodeType.HIPPO_PATHS)) {
-                return true;
-              }
+                    if (node.isNodeType(HippoNodeType.NT_DOCUMENT) && node.hasProperty(HippoNodeType.HIPPO_PATHS)) {
+                      return true;
+                    }
 
-              return false;
-            }
+                    return false;
+                  }
 
-            @Override
-            public boolean isTraversable(Node node) throws RepositoryException {
-              return !node.isNodeType(HippoStdPubWfNodeType.HIPPOSTDPUBWF_DOCUMENT);
-            }
+                  @Override
+                  public boolean isTraversable(Node node) throws RepositoryException {
+                    return !node.isNodeType(HippoStdPubWfNodeType.HIPPOSTDPUBWF_DOCUMENT);
+                  }
 
-            @Override
-            public void accept(Node node) throws RepositoryException {
-              ((HippoNode) node).recomputeDerivedData();
-            }
-          });
+                  @Override
+                  public void accept(Node node) throws RepositoryException {
+                    ((HippoNode) node).recomputeDerivedData();
+                  }
+                });
       } catch (RepositoryException e) {
         log.error("Failed to touch hippo:paths properties.", e);
       }
@@ -561,7 +560,7 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
         }
       } catch (RepositoryException e) {
         log.error("Failed to set hippo:translation node of folder at {} with value='{}'.",
-          folderPath, displayName, e);
+                folderPath, displayName, e);
       }
     }
 
