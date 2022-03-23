@@ -60,6 +60,7 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
 
 
 //
+        String randomUuid = UUID.randomUUID().toString();
 //
         for (Map.Entry<String, ArrayList> entry : load.entrySet()) {
             def importElement = entry.getValue()
@@ -94,11 +95,11 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
                                 putFile = new UpdateFile();
                                 putFile.setSha(fileMap.get(fileName))
                                 putFile.setContent(encodedString);
-                                putFile.setMessage(new Date().toString())
+                                putFile.setMessage(randomUuid)
                             }else{
                                 putFile = new UploadFile();
                                 putFile.setContent(encodedString);
-                                putFile.setMessage(new Date().toString())
+                                putFile.setMessage(randomUuid)
                             }
 
 
