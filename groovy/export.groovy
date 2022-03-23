@@ -108,7 +108,7 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
                             String fooResourceUrl = "https://api.github.com/repos/ksalic/pacific-home-import/contents/";
 
                             HttpHeaders headers = new HttpHeaders();
-                            headers.add("Authorization", "Bearer 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");
+                            headers.add("Authorization", "Bearer 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");
 
                             final HttpEntity entity = new HttpEntity(putFile, headers);
 
