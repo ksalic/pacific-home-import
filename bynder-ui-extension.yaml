@@ -1,0 +1,9 @@
+/bynder:
+  jcr:primaryType: frontend:uiExtension
+  frontend:config: "{\"defaultDomain\":\"https://bloomreach.getbynder.com\", \"language\"\
+    :\r\n    \"en_US\", \"mode\": \"SingleSelect\", \"assetTypes\": [\"image\"], \"\
+    clientId\":\r\n    \"8ce8d77c-2819-436c-a78d-bab330d13e44\", \"clientSecret\"\
+    :\"680d3042-971e-4e8b-99a6-12ff0a561f84\"}"
+  frontend:displayName: Bynder
+  frontend:extensionPoint: document.field
+  frontend:url: https://pacific-ui-extensions.herokuapp.com/bynder_v2/
