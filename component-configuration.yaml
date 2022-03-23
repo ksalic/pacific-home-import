@@ -930,7 +930,7 @@
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 362e364e-a868-4da4-adff-ebd9c0677457
-      hippo:versionHistory: 6a34d025-5968-424d-b3f3-b005b192d9d1
+      hippo:versionHistory: 484ee17e-9e57-4a09-a4a6-d00d7cad8a64
       /productgrid-variants[1]:
         jcr:primaryType: resourcebundle:resourcebundle
         jcr:mixinTypes: ['mix:referenceable']
@@ -940,12 +940,12 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
         hippostdpubwf:creationDate: 2021-06-22T18:19:19.987+02:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T15:07:06.341+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T18:19:19.987+02:00
         hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '', '', '']
+        resourcebundle:descriptions: ['', '']
         resourcebundle:id: product-grid.variants
-        resourcebundle:keys: [default, list, groups-as-single-list, groups]
-        resourcebundle:messages: [Grid (Default), List, Groups As Single List, Groups]
+        resourcebundle:keys: [default, list]
+        resourcebundle:messages: [Grid (Default), List]
       /productgrid-variants[2]:
         jcr:primaryType: resourcebundle:resourcebundle
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -955,12 +955,12 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
         hippostdpubwf:creationDate: 2021-06-22T18:19:19.987+02:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T15:08:29.876+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T18:21:19.881+02:00
         hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '', '', '']
+        resourcebundle:descriptions: ['', '']
         resourcebundle:id: product-grid.variants
-        resourcebundle:keys: [default, list, groups-as-single-list, groups]
-        resourcebundle:messages: [Grid (Default), List, Groups As Single List, Groups]
+        resourcebundle:keys: [default, list]
+        resourcebundle:messages: [Grid (Default), List]
       /productgrid-variants[3]:
         jcr:primaryType: resourcebundle:resourcebundle
         jcr:mixinTypes: ['mix:referenceable']
@@ -970,64 +970,13 @@
         hippostd:state: published
         hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
         hippostdpubwf:creationDate: 2021-06-22T18:19:19.987+02:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T15:08:29.876+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T18:21:19.881+02:00
         hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:publicationDate: 2022-02-11T15:08:32.044+01:00
-        resourcebundle:descriptions: ['', '', '', '']
+        hippostdpubwf:publicationDate: 2021-06-22T18:21:23.835+02:00
+        resourcebundle:descriptions: ['', '']
         resourcebundle:id: product-grid.variants
-        resourcebundle:keys: [default, list, groups-as-single-list, groups]
-        resourcebundle:messages: [Grid (Default), List, Groups As Single List, Groups]
-    /groupby-options:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 435c9d81-73d2-42a6-815c-6aceb1f59b4e
-      hippo:versionHistory: 19aa79f6-fc8a-4919-8b8d-8bcf9ccbd32f
-      /groupby-options[1]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 876de2f7-a6c0-4202-a7e9-5e649f277a74
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:creationDate: 2022-02-11T21:09:25.163+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T21:09:25.163+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '']
-        resourcebundle:id: groupby.options
-        resourcebundle:keys: [material, colorFamily]
-        resourcebundle:messages: [Material, Color]
-      /groupby-options[2]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: cf02a84f-6c02-4995-a0dc-b986326c354b
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:creationDate: 2022-02-11T21:09:25.163+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T21:11:22.039+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '']
-        resourcebundle:id: groupby.options
-        resourcebundle:keys: [material, colorFamily]
-        resourcebundle:messages: [Material, Color]
-      /groupby-options[3]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 4045348b-d12a-4d6e-b47d-aa34e50c3cea
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:creationDate: 2022-02-11T21:09:25.163+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-11T21:11:22.039+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:publicationDate: 2022-02-11T21:11:53.132+01:00
-        resourcebundle:descriptions: ['', '']
-        resourcebundle:id: groupby.options
-        resourcebundle:keys: [material, colorFamily]
-        resourcebundle:messages: [Material, Color]
+        resourcebundle:keys: [default, list]
+        resourcebundle:messages: [Grid (Default), List]
   /text-and-image:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'mix:versionable']
@@ -1047,11 +996,10 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
-        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-09-22T07:22:21.742+02:00
-        hippostdpubwf:lastModificationDate: 2022-01-27T20:16:46.303+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
+        hippostdpubwf:lastModificationDate: 2021-09-22T07:22:21.742+02:00
+        hippostdpubwf:lastModifiedBy: admin
         resourcebundle:descriptions: ['', '']
         resourcebundle:id: textandimage.template.variants
         resourcebundle:keys: [image-left, image-right]
@@ -1087,62 +1035,3 @@
         resourcebundle:id: textandimage.template.variants
         resourcebundle:keys: [image-left, image-right]
         resourcebundle:messages: [Image Left, Image Right]
-  /form:
-    jcr:primaryType: hippostd:folder
-    jcr:mixinTypes: ['mix:versionable']
-    jcr:uuid: a65b32c3-b858-40e9-bb03-54bb207f5c52
-    hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
-    /form-variants:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: d1ffe489-fc43-4962-9f45-90b464966b73
-      hippo:versionHistory: c80b977d-1a18-4bb8-a38f-cc680597eeb0
-      /form-variants[1]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 701319a1-7e55-435c-9e1d-c2e114042afc
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T19:59:57.079+01:00
-        hippostdpubwf:lastModificationDate: 2022-01-27T20:16:56.856+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '', '']
-        resourcebundle:id: form.variants
-        resourcebundle:keys: [default, form-left, from-right]
-        resourcebundle:messages: [One Column - Stacked, Two Column - Form Left, Two
-            Column - Form Right]
-      /form-variants[2]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: 6368ca7c-6ff6-49c0-bb8f-78f64f2aa52d
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T19:59:57.079+01:00
-        hippostdpubwf:lastModificationDate: 2022-01-27T20:17:01.873+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        resourcebundle:descriptions: ['', '', '']
-        resourcebundle:id: form.variants
-        resourcebundle:keys: [default, form-left, from-right]
-        resourcebundle:messages: [One Column - Stacked, Two Column - Form Left, Two
-            Column - Form Right]
-      /form-variants[3]:
-        jcr:primaryType: resourcebundle:resourcebundle
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: f75923f8-7444-41dc-91a5-1d1707a29ac5
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T19:59:57.079+01:00
-        hippostdpubwf:lastModificationDate: 2022-01-27T20:17:01.873+01:00
-        hippostdpubwf:lastModifiedBy: pacifichomebrx+yong@gmail.com
-        hippostdpubwf:publicationDate: 2022-01-27T20:17:04.140+01:00
-        resourcebundle:descriptions: ['', '', '']
-        resourcebundle:id: form.variants
-        resourcebundle:keys: [default, form-left, from-right]
-        resourcebundle:messages: [One Column - Stacked, Two Column - Form Left, Two
-            Column - Form Right]
