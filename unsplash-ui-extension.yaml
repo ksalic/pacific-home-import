@@ -3,5 +3,5 @@
   frontend:config: '{"clientId":"86efc67df503eda4d10f0e620d51c4797d369a44d0b32d7783eda7b8caf53713",
     "unsplashRandomUrl":"https://api.unsplash.com/photos/random","unsplashSearchUrl":"https://api.unsplash.com/search/photos"}'
   frontend:displayName: Unsplash
-  frontend:extensionPoint: document.field
+  frontend:extensionPoint: document.field...
   frontend:url: https://pacific-ui-extensions.herokuapp.com/unsplash/
