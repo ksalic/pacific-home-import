@@ -1,0 +1,96 @@
+/getting-started:
+  jcr:primaryType: hst:blueprint
+  jcr:uuid: 2e3a4614-5795-4788-b15d-1ca75689a257
+  hst:description: Getting started for frontend development
+  hst:name: Getting Started
+  /hst:configuration:
+    jcr:primaryType: hst:configuration
+    jcr:uuid: 3fd06d3c-6f75-4086-a3c3-f5d903dacc80
+    /hst:abstractpages:
+      jcr:primaryType: hst:pages
+      jcr:uuid: 73d8c4da-9223-4c6f-84b0-534de4a34d4e
+      /base:
+        jcr:primaryType: hst:component
+        jcr:uuid: d0f3529b-9165-45b9-8064-7f02ce2ff879
+        /menu:
+          jcr:primaryType: hst:component
+          jcr:uuid: 932802f2-1341-415a-8103-0ec828412203
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsMenuComponent
+          hst:parameternames: [selectedMenu, level, menu]
+          hst:parametervalues: ['on', '1', main]
+    /hst:catalog:
+      jcr:primaryType: hst:catalog
+      jcr:uuid: b8d9503d-0713-478f-8dca-02f064434c20
+      /sample:
+        jcr:primaryType: hst:containeritempackage
+        jcr:uuid: bf2496b5-1df1-4ea7-882b-f2d59c94c293
+    /hst:pages:
+      jcr:primaryType: hst:pages
+      jcr:uuid: b182cd41-104d-4b83-9af9-c3fe4a8d74ce
+      /pagenotfound:
+        jcr:primaryType: hst:component
+        jcr:uuid: 93b71951-2024-46d2-b444-c5b6eedfe1f6
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          jcr:uuid: f2571461-c547-4f9b-b823-40abf566c914
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsPageNotFoundComponent
+    /hst:sitemap:
+      jcr:primaryType: hst:sitemap
+      jcr:uuid: c67403dc-53c4-41c8-9fe5-cb2431ca0195
+      /_any_:
+        jcr:primaryType: hst:sitemapitem
+        jcr:uuid: 1f3d8cd9-684b-4c44-8327-561c2dd4668c
+        hst:componentconfigurationid: hst:pages/pagenotfound
+        hst:relativecontentpath: pages/${1}
+      /root:
+        jcr:primaryType: hst:sitemapitem
+        jcr:uuid: b76daff9-e631-4055-903f-6388f915390c
+        hst:pagetitle: Home Page
+        hst:refId: root
+        hst:relativecontentpath: pages/home
+    /hst:workspace:
+      jcr:primaryType: hst:workspace
+      /hst:sitemenus:
+        jcr:primaryType: hst:sitemenus
+        jcr:uuid: 2f7ec7b4-7202-44f2-8217-2649ac844929
+        /main:
+          jcr:primaryType: hst:sitemenu
+          jcr:uuid: 7e38a4a9-e435-41dd-94e3-07deceea82dd
+          /home:
+            jcr:primaryType: hst:sitemenuitem
+            jcr:uuid: c5fb10f1-721b-408a-b0e7-2f25ce76e986
+            hst:referencesitemapitem: root
+      /hst:channel:
+        jcr:primaryType: hst:channel
+        jcr:uuid: da07dfd1-c5ff-4572-8966-864b0a745600
+        hst:name: Getting Started
+        hst:type: website
+        /hst:channelinfo:
+          jcr:primaryType: hst:channelinfo
+          org.hippoecm.hst.configuration.channel.PreviewURLChannelInfo_url: https://skeleton.bloomreach.works/
+      /hst:pages:
+        jcr:primaryType: hst:pages
+        jcr:uuid: e92a48f3-44d4-4317-a6d6-444d7f64e901
+      /hst:sitemap:
+        jcr:primaryType: hst:sitemap
+        jcr:uuid: dc606095-42b7-4272-8fed-4e9cc3ebdd37
+    /hst:xpages:
+      jcr:primaryType: hst:xpages
+      jcr:uuid: 1df02862-d77c-4958-8c18-4b9945d4e08f
+      /one-column:
+        jcr:primaryType: hst:xpage
+        jcr:uuid: 56796a58-f083-4d58-a0ca-05aaff74e7c0
+        hst:label: One Column
+        hst:referencecomponent: hst:abstractpages/base
+        /container:
+          jcr:primaryType: hst:containercomponent
+          jcr:uuid: 85197a8b-9d18-4336-aedb-a0b84ca80c38
+          hippo:identifier: f8536f60-22ad-4111-82c4-6f8f5a77a884
+          hst:label: Container (component drop zone)
+          hst:xtype: hst.nomarkup
+  /hst:mount:
+    jcr:primaryType: hst:mount
+    jcr:uuid: d329df71-293f-4570-8f5c-d8d6a6f6356e
+    hst:pagemodelapi: pma
+    hst:responseheaders: ['Access-Control-Allow-Origin: *']
