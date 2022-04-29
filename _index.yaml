@@ -1,6 +1,7 @@
 blueprint:
   - /hst:myproject/hst:blueprints:
       - getting-started: getting-started.yaml
+      - getting-started: getting-started.zip
 
 
 
