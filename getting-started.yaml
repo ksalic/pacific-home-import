@@ -1,7 +1,7 @@
 /getting-started:
   jcr:primaryType: hst:blueprint
   jcr:uuid: 2e3a4614-5795-4788-b15d-1ca75689a257
-  hst:description: Getting started for frontend development
+  hst:description: Getting started for frontend development v2
   hst:name: Getting Started
   /hst:configuration:
     jcr:primaryType: hst:configuration
