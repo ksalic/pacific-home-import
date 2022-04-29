@@ -7,8 +7,8 @@ pre-import:
   - /content/documents/administration:
       - component-configuration: component-configuration.yaml
       - brsm-account-list: brsm-account-list.yaml
-  - /content/gallery:
-      - pacific-home: gallery-pacific-home.zip
+#  - /content/gallery:
+#      - pacific-home: gallery-pacific-home.zip
 #  - /content/assets:
 #      - pacific-home: assets-pacific-home.zip
 post-import:
