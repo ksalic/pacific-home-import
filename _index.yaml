@@ -1,16 +1,16 @@
-pre-import:
-  - /hippo:configuration/hippo:frontend/cms/ui-extensions:
-      - bynder: bynder-ui-extension.yaml
-      - categoryPicker: categoryPicker-ui-extension.yaml
-      - productPicker: productPicker-ui-extension.yaml
-      - unsplash: unsplash-ui-extension.yaml
-  - /content/documents/administration:
-      - component-configuration: component-configuration.yaml
-      - brsm-account-list: brsm-account-list.yaml
-  - /content/gallery:
-      - pacific-home: gallery-pacific-home.zip
-  - /content/assets:
-      - pacific-home: assets-pacific-home.zip
+#pre-import:
+#  - /hippo:configuration/hippo:frontend/cms/ui-extensions:
+#      - bynder: bynder-ui-extension.yaml
+#      - categoryPicker: categoryPicker-ui-extension.yaml
+#      - productPicker: productPicker-ui-extension.yaml
+#      - unsplash: unsplash-ui-extension.yaml
+#  - /content/documents/administration:
+#      - component-configuration: component-configuration.yaml
+#      - brsm-account-list: brsm-account-list.yaml
+#  - /content/gallery:
+#      - pacific-home: gallery-pacific-home.zip
+#  - /content/assets:
+#      - pacific-home: assets-pacific-home.zip
 post-import:
   - /hst:brxsaas/hst:blueprints:
       - new-pacific-home-website: new-pacific-home-website.zip
