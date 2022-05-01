@@ -5,143 +5,155 @@ import org.apache.commons.io.FileUtils
 import org.apache.commons.math3.random.ValueServer
 import org.onehippo.cm.ConfigurationService
 import org.onehippo.cms7.services.HippoServiceRegistry
+import org.onehippo.cms7.utilities.logging.PrintStreamLogger
 import org.onehippo.repository.update.BaseNodeUpdateVisitor
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
 import org.springframework.http.ResponseEntity
-import org.springframework.util.MultiValueMap
 import org.springframework.web.client.RestTemplate
 import org.yaml.snakeyaml.Yaml
 
 import javax.jcr.Node
 import javax.jcr.RepositoryException
 import javax.jcr.Session
+import java.nio.charset.StandardCharsets
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
+import org.slf4j.Logger;
+import java.nio.charset.Charset;
 
 class UpdaterEditor extends BaseNodeUpdateVisitor {
 
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    PrintStream ps = new PrintStream(this.baos, true, "UTF-8");
 
     final ConfigurationService configurationService = HippoServiceRegistry.getService(ConfigurationService.class);
 
     public void initialize(Session session) throws RepositoryException {
+        Logger logger = new PrintStreamLogger("export script", 0, ps);
+        setLogger(logger);
     }
 
     boolean doUpdate(Node node) {
-        log.debug("start")
-        log.debug(configurationService.getClass().getSimpleName())
-        def imp = FileUtils.getFile(FileUtils.getTempDirectory(), "import");
-        imp.mkdir();
-        log.debug(imp.getAbsolutePath());
-        def index = FileUtils.getFile(imp.getAbsolutePath(), "_index.yaml");
-        ValueServer server = new ValueServer();
-        server.setValuesFileURL("https://raw.githubusercontent.com/ksalic/pacific-home-import/master/_index.yaml")
-        FileUtils.copyURLToFile(server.getValuesFileURL(), index)
-        def destDir = FileUtils.getFile(FileUtils.getTempDirectory(), "export");
-        FileUtils.deleteDirectory(destDir)
-        destDir.mkdir();
+        try {
+            log.debug("start")
+            log.debug(configurationService.getClass().getSimpleName())
+            String randomUuid = UUID.randomUUID().toString();
+            def imp = FileUtils.getFile(FileUtils.getTempDirectory(), "import" + randomUuid);
+            imp.mkdir();
+            log.debug(imp.getAbsolutePath());
+            def index = FileUtils.getFile(imp.getAbsolutePath(), "_index.yaml");
+            ValueServer server = new ValueServer();
+            server.setValuesFileURL("https://raw.githubusercontent.com/ksalic/pacific-home-import/master/_index.yaml")
+            FileUtils.copyURLToFile(server.getValuesFileURL(), index)
+            def destDir = FileUtils.getFile(FileUtils.getTempDirectory(), "export");
+            FileUtils.deleteDirectory(destDir)
+            destDir.mkdir();
 
-        Yaml yaml = new Yaml()
-        LinkedHashMap<String, ArrayList> load = yaml.load(FileUtils.openInputStream(index))
-        log.debug(load.toString());
+            Yaml yaml = new Yaml()
+            LinkedHashMap<String, ArrayList> load = yaml.load(FileUtils.openInputStream(index))
+            log.debug(load.toString());
 
-        ObjectMapper mapper = new ObjectMapper();
-        ValueServer restList = new ValueServer();
-        restList.setValuesFileURL("https://api.github.com/repos/ksalic/pacific-home-import/contents/")
-        List fileRegistry = mapper.readValue(restList.getValuesFileURL(), List.class);
-        log.debug("file list size = " + String.valueOf(fileRegistry.size()));
+            ObjectMapper mapper = new ObjectMapper();
+            ValueServer restList = new ValueServer();
+            restList.setValuesFileURL("https://api.github.com/repos/ksalic/pacific-home-import/contents/")
+            List fileRegistry = mapper.readValue(restList.getValuesFileURL(), List.class);
+            log.debug("file list size = " + String.valueOf(fileRegistry.size()));
 
-        Map<String, String> fileMap = new HashMap<>();
+            Map<String, String> fileMap = new HashMap<>();
 
-        for (LinkedHashMap file : fileRegistry) {
-            fileMap.put(file.get("name"), file.get("sha"))
-        }
+            for (LinkedHashMap file : fileRegistry) {
+                fileMap.put(file.get("name"), file.get("sha"))
+            }
 
 
-//
-        String randomUuid = UUID.randomUUID().toString();
-//
-        for (Map.Entry<String, ArrayList> entry : load.entrySet()) {
-            def importElement = entry.getValue()
-            for (LinkedHashMap<String, List<Map<String, String>>> importItem : importElement) {
-                String path = importItem.entrySet().getAt(0).getKey();
-                if (node.getSession().itemExists(path)) {
-                    Node parentNode = node.getSession().getNode(path);
-                    log.debug(parentNode.getPath())
-                    List<Map<String, String>> items = importItem.entrySet().getAt(0).getValue();
-                    for (Map<String, String> item : items) {
-                        Map.Entry<String, String> itemEntry = item.entrySet().getAt(0)
-                        String relativePath = itemEntry.getKey();
-                        String fileName = itemEntry.getValue();
+            for (Map.Entry<String, ArrayList> entry : load.entrySet()) {
+                def importElement = entry.getValue()
+                for (LinkedHashMap<String, List<Map<String, String>>> importItem : importElement) {
+                    String path = importItem.entrySet().getAt(0).getKey();
+                    if (node.getSession().itemExists(path)) {
+                        Node parentNode = node.getSession().getNode(path);
+                        log.debug(parentNode.getPath())
+                        List<Map<String, String>> items = importItem.entrySet().getAt(0).getValue();
+                        for (Map<String, String> item : items) {
+                            Map.Entry<String, String> itemEntry = item.entrySet().getAt(0)
+                            String relativePath = itemEntry.getKey();
+                            String fileName = itemEntry.getValue();
 
-                        log.debug("checking.." + relativePath);
-                        if (parentNode.hasNode(relativePath)) {
-                            log.debug("has node..")
-                            Node export = parentNode.getNode(relativePath)
-                            log.debug("entering existing node..")
+                            log.debug("checking.." + relativePath);
+                            if (parentNode.hasNode(relativePath)) {
+                                log.debug("has node..")
+                                Node export = parentNode.getNode(relativePath)
+                                log.debug("entering existing node..")
 
-                            def file = FileUtils.getFile(destDir, fileName);
-                            if (fileName.endsWith(".zip")) {
-                                FileUtils.copyFile(configurationService.exportZippedContent(export), file);
+                                def file = FileUtils.getFile(destDir, fileName);
+                                if (fileName.endsWith(".zip")) {
+                                    FileUtils.copyFile(configurationService.exportZippedContent(export), file);
+                                } else {
+                                    FileUtils.writeStringToFile(file, configurationService.exportContent(export), "UTF-8");
+                                }
+                                byte[] fileContent = FileUtils.readFileToByteArray(file);
+                                String encodedString = Base64.getEncoder().encodeToString(fileContent);
+
+                                Object putFile;
+                                if (fileMap.containsKey(fileName)) {
+                                    putFile = new UpdateFile();
+                                    putFile.setSha(fileMap.get(fileName))
+                                    putFile.setContent(encodedString);
+                                    putFile.setMessage(randomUuid)
+                                } else {
+                                    putFile = new UploadFile();
+                                    putFile.setContent(encodedString);
+                                    putFile.setMessage(randomUuid)
+                                }
+
+
+                                log.debug("posting.. " + fileName + " ..." + putFile.toString())
+
+                                RestTemplate restTemplate = new RestTemplate();
+                                String fooResourceUrl = "https://api.github.com/repos/ksalic/pacific-home-import/contents/";
+
+                                HttpHeaders headers = new HttpHeaders();
+                                headers.add("Authorization", "Bearer xx");
+
+                                final HttpEntity entity = new HttpEntity(putFile, headers);
+
+                                log.debug("running exchange..")
+
+                                ResponseEntity<String> response = restTemplate.exchange(fooResourceUrl + fileName, HttpMethod.PUT, entity, String.class);
+
+                                log.debug("result:")
+                                log.debug(response.getBody())
                             } else {
-                                FileUtils.writeStringToFile(file, configurationService.exportContent(export), "UTF-8");
+                                log.debug("node does not exist")
                             }
-                            byte[] fileContent = FileUtils.readFileToByteArray(file);
-                            String encodedString = Base64.getEncoder().encodeToString(fileContent);
-
-                            Object putFile;
-                            if (fileMap.containsKey(fileName)) {
-                                putFile = new UpdateFile();
-                                putFile.setSha(fileMap.get(fileName))
-                                putFile.setContent(encodedString);
-                                putFile.setMessage(randomUuid)
-                            }else{
-                                putFile = new UploadFile();
-                                putFile.setContent(encodedString);
-                                putFile.setMessage(randomUuid)
-                            }
-
-
-                            log.debug("posting.. " + fileName + " ..." + putFile.toString())
-
-                            RestTemplate restTemplate = new RestTemplate();
-                            String fooResourceUrl = "https://api.github.com/repos/ksalic/pacific-home-import/contents/";
-
-                            HttpHeaders headers = new HttpHeaders();
-                            headers.add("Authorization", "Bearer xxx");
-
-                            final HttpEntity entity = new HttpEntity(putFile, headers);
-
-                            log.debug("running exchange..")
-
-                            ResponseEntity<String> response = restTemplate.exchange(fooResourceUrl + fileName, HttpMethod.PUT, entity, String.class);
-
-                            log.debug("result:")
-                            log.debug(response.getBody())
-                        } else {
-                            log.debug("node does not exist")
                         }
+                    } else {
+                        log.debug("node " + path + " does not exist, unable to export")
                     }
-                } else {
-                    log.debug("node " + path + " does not exist, unable to export")
                 }
             }
-        }
-//
-//
-//        def compressedExport = FileUtils.getFile(destDir, "dirCompressed.zip")
-//        def fos = FileUtils.openOutputStream(compressedExport);
-//        ZipOutputStream zipOut = new ZipOutputStream(fos);
-//        def fileToZip = destDir;
-//
-//        zipFile(fileToZip, fileToZip.getName(), zipOut);
-//        zipOut.close();
-//        fos.close();
-//
-//        def exportNode = node.addNode("export" + UUID.randomUUID().toString(), "nt:unstructured");
-//        exportNode.setProperty("zip", FileUtils.openInputStream(compressedExport));
 
+
+            imp.deleteDir();
+            destDir.deleteDir();
+        } catch (Exception e) {
+            log.error(e);
+        } finally {
+            def logNode = node.hasNode("export") ? node.getNode("export") : node.addNode("export", "nt:unstructured");
+            String content = new String(baos.toByteArray(), "UTF-8");
+            logNode.setProperty("log", content);
+        }
+    }
+
+    @Override
+    void destroy() {
+        try {
+            ps.close();
+            baos.close();
+        } catch (Exception e) {
+        }
 
     }
 
