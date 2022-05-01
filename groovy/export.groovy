@@ -7,6 +7,7 @@ import org.onehippo.cm.ConfigurationService
 import org.onehippo.cms7.services.HippoServiceRegistry
 import org.onehippo.cms7.utilities.logging.PrintStreamLogger
 import org.onehippo.repository.update.BaseNodeUpdateVisitor
+import org.slf4j.Logger
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -17,13 +18,13 @@ import org.yaml.snakeyaml.Yaml
 import javax.jcr.Node
 import javax.jcr.RepositoryException
 import javax.jcr.Session
-import java.nio.charset.StandardCharsets
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
-import org.slf4j.Logger;
-import java.nio.charset.Charset;
 
 class UpdaterEditor extends BaseNodeUpdateVisitor {
+
+    String INDEX_FILE_NAME = "_index.yaml"
+    String GITHUB_AUTH_TOKEN = "ghp_xx"
 
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(this.baos, true, "UTF-8");
@@ -43,9 +44,9 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
             def imp = FileUtils.getFile(FileUtils.getTempDirectory(), "import" + randomUuid);
             imp.mkdir();
             log.debug(imp.getAbsolutePath());
-            def index = FileUtils.getFile(imp.getAbsolutePath(), "_index.yaml");
+            def index = FileUtils.getFile(imp.getAbsolutePath(), INDEX_FILE_NAME);
             ValueServer server = new ValueServer();
-            server.setValuesFileURL("https://raw.githubusercontent.com/ksalic/pacific-home-import/master/_index.yaml")
+            server.setValuesFileURL("https://raw.githubusercontent.com/ksalic/pacific-home-import/master/" + INDEX_FILE_NAME)
             FileUtils.copyURLToFile(server.getValuesFileURL(), index)
             def destDir = FileUtils.getFile(FileUtils.getTempDirectory(), "export");
             FileUtils.deleteDirectory(destDir)
@@ -115,7 +116,7 @@ class UpdaterEditor extends BaseNodeUpdateVisitor {
                                 String fooResourceUrl = "https://api.github.com/repos/ksalic/pacific-home-import/contents/";
 
                                 HttpHeaders headers = new HttpHeaders();
-                                headers.add("Authorization", "Bearer xx");
+                                headers.add("Authorization", "Bearer " + GITHUB_AUTH_TOKEN);
 
                                 final HttpEntity entity = new HttpEntity(putFile, headers);
 
