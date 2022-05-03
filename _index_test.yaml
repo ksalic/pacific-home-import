@@ -1,0 +1,21 @@
+content:
+#  - /content/gallery:
+#      - pacific-home: pacific-home-root-gallery.yaml
+  - /content/gallery/pacific-home:
+      - refresh: refresh.zip
+      - icons: icons.zip
+      - branding: branding.zip
+      - authors: authors.zip
+      - categories: categories.zip
+      - articles: articles.zip
+      - banners: banners.zip
+  - /content/assets:
+      - pacific-home: assets-pacific-home.zip
+  - /hst:brxsaas/hst:blueprints:
+      - new-pacific-home-website: new-pacific-home-website.zip
+  - /hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates:
+      - new-pacific-home-website: content-new-pacific-home-website.zip
+
+
+
+
