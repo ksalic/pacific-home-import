@@ -8,13 +8,13 @@ pre-import:
       - component-configuration: component-configuration.yaml
       - brsm-account-list: brsm-account-list.yaml
   - /content/gallery/pacific-home:
-      - refresh: gallery-pacific-home-refresh.zip
-      - icons: gallery-pacific-home-icons.zip
-      - branding: gallery-pacific-branding.zip
-      - authors: gallery-pacific-authors.zip
-      - categories: gallery-pacific-categories.zip
-      - articles: assets-pacific-articles.zip
-      - banners: assets-pacific-banners.zip
+      - refresh: refresh.zip
+      - icons: icons.zip
+      - branding: branding.zip
+      - authors: authors.zip
+      - categories: categories.zip
+      - articles: articles.zip
+      - banners: banners.zip
 post-import:
   - /hst:brxsaas/hst:blueprints:
       - new-pacific-home-website: new-pacific-home-website.zip
