@@ -1,6 +1,6 @@
 content:
-  - /content/gallery:
-      - pacific-home: gallery-pacific-home.zip
+  - /content/gallery/pacific-home:
+      - refresh: refresh.zip
   - /content/assets:
       - pacific-home: assets-pacific-home.zip
   - /hst:brxsaas/hst:blueprints:
